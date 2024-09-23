@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="icon" href="./assets/img/cine.jfif">
+</head><hr>
+<body>
+    <header>
+        <h1>FORMULARIO</h1>
+        <hr>
+    </header>
+    <main>
+        <form>
+            <label for="name">NOMBRE</label>
+            <input
+            name="name"
+            type="text"
+            id="name"
+            placeholder="Escribe tu nombre"
+            value=""
+            maxlength="10"
+            minlength="3"
+            required
+            />
+            <label for="apellido">APELLIDO</label>
+            <input
+            name="apellido"
+            type="text"
+            id="apellido"
+            placeholder="Escribe tu apellido"
+            value=""
+            maxlength="15"
+            minlength="3"
+            required
+            /><br>
+            <br><label for="age">EDAD</label>
+            <input
+            name="edad"
+            type="number"
+            id="age"
+            placeholder="Edad"
+            value=""
+            min="18"
+            max="100"
+            required
+            /><br>
+            <br><label for="email">EMAIL</label>
+            <input
+            name="email"
+            type="email"
+            id="email"
+            placeholder="Escribe tu Correo Electronico"
+            value=""
+            maxlength="30"
+            minlength="12"
+            required
+            /><br>
+            <br><label for="contra"></label>
+            <input
+            name="contraseña"
+            type="password"
+            id="contra"
+            placeholder="CONTRASEÑA"
+            value=""
+            maxlength="20"
+            minlength="10"
+            required
+            /><br>
+            <br><textarea
+                name="comment" 
+                id="comment" 
+                maxlength="50" 
+                cols="30" 
+                rows="13"
+                placeholder="Escribe tu Comentario"
+                value=""></textarea><br>
+                QUE TAL LE PARECIO LA PAGINA
+                <select name="like" id="like" required>
+                    <option></option>
+                    <option>MALA</option>
+                    <option>REGULAR</option>
+                    <option>BUENA</option>
+                    <option>MUY BUENA</option>
+                    <option>EXCELENTE</option>
+            </select><br>
+            <br><label for="noinfo">GENERO:</label>
+            <br><input
+                type="radio"
+                name="genero"
+                id="hombre"
+            />
+            <label for="hombre">HOMBRE</label>
+            <br><input
+                type="radio"
+                name="genero"
+                id="mujer"
+            />
+            <label for="mujer">MUJER</label>
+            <br><input
+                type="radio"
+                name="genero"
+                id="noinfo"
+            />
+            <label for="noinfo">NO INFO</label><br>
+            <br><input
+                type="checkbox"
+                name="terminos"
+                id="terminos"
+                required
+            />
+            <label for="terminos">Acepto los terminos y Condiciones</label><br>
+            <br><input
+            type="submit"
+            value="Enviar"
+            /> 
+        </form>
+    </main>
+</body>
+</html>
