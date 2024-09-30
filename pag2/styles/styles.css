@@ -1,23 +1,51 @@
 html{
     background-color: silver
 }
-header{
+
+#menu{
+    margin-left: 2px;
     font-size: 13px;
+    text-align: center;
 }
+
+.menus{
+    text-decoration: none;
+    color: hsla(0, 99%, 48%, 0.816);
+    padding-right: 100px;
+}
+
 #centro {
-    border : 1px solid #a40c0ccd;
+    border : 5px outset #a40c0ccd;
     font-size: 20px;
     color: brown;
+    padding: 10px;
 }
+
 p{
     font-size: 15px;
-    color: #ff0000;
+    color: rgba(69, 3, 3, 0.875);
 }
+
 h1{
     font-size: 35px;
     color: brown;
     text-align: center;
 }
+
 #myfooter{
     font-size: 15px;
+    text-decoration: none;
+}
+
+.content{
+    padding-left: 25%;
+}
+#puntuacion{
+    color: #0000008b;
+    font-size: 20px;
+    padding-left: 85%;
+}
+
+h4{
+    padding-left: 15px;
 }
