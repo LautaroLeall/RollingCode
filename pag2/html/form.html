@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORMULARIO</title>
     <link rel="icon" href="/pag2/assets/cine.png">
-</head><hr>
+    <link rel="stylesheet" href="/pag2/styles/form.css">
+</head>
 <body>
-    <header>
-        <h1>FORMULARIO</h1>
-        <hr>
-    </header>
+    <header> 
+            <nav id="menu">
+                <ul>
+                    <a href="/pag2/html/index.html"class="menus">INICIO</a>
+                    <a href="/pag2/html/pelicula.html"class="menus">PELICULA</></a>
+                    <a href="/pag2/html/index.html#trailer"class="menus">TRAILER</a>
+                    <a href="/pag2/html/index.html#resumen"class="menus">RESUMEN</a>
+                    <a href="/pag2/html/form.html"class="menus">FORMULARIO</a>
+                </ul>
+            </nav>
+    </header> <hr>
     <main>
+        <h1>FORMULARIO</h1>
+        <div class="form">
         <form>
             <label for="name">NOMBRE</label>
             <input
@@ -64,8 +74,8 @@
             id="contra"
             placeholder="CONTRASEÑA"
             value=""
-            maxlength="20"
-            minlength="10"
+            maxlength="15"
+            minlength="8"
             required
             /><br>
             <br><textarea
@@ -116,6 +126,13 @@
             value="Enviar"
             /> 
         </form>
-    </main>
+        </div>
+    </main> <hr>
+    <footer id="myfooter">
+        <small>Creada por Lautaro Leal</small><br>
+        <a href="https://www.google.com/maps/place/Don+Bosco+3172,+T4000DMJ+San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n/@-26.818487,-65.243434,15z/data=!4m6!3m5!1s0x94225cf74ff9371b:0x6567baad96d0e761!8m2!3d-26.8184875!4d-65.2434337!16s%2Fg%2F11fvr221kd?hl=es-419&entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" target="_blank"><small id="direc">Don Bosco 3172</small></a>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.6746130013285!2d-65.24600862641549!3d-26.818487476703414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225cf74ff9371b%3A0x6567baad96d0e761!2sDon%20Bosco%203172%2C%20T4000DMJ%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1726961055516!5m2!1ses-419!2sar" width="200" height="150" frameborder="5" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer><hr>
 </body>
 </html>
