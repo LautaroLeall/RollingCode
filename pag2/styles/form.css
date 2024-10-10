@@ -1,0 +1,44 @@
+html{
+    background-color:  silver;
+}
+
+/*NAVBAR*/
+
+#menu{
+    margin-left: 2px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.menus{
+    text-decoration: none;
+    color: hsla(0, 99%, 48%, 0.816);
+    padding-right: 100px;
+}
+
+/*FORMULARIO*/
+
+.form{
+    background-color: hsla(0, 0%, 18%, 0.067);
+    margin-left: 25vw;
+    height: auto;
+    width: 50vw;
+    padding: 15px;
+    color: hsla(0, 99%, 48%, 0.816);
+    font-size: 17px;
+    border: 2px double brown;
+    border-radius: 30px;
+}
+
+h1{
+    font-size: 35px;
+    color: brown;
+    text-align: center;
+}
+
+/*FOOTER*/
+
+#myfooter{
+    font-size: 15px;
+    text-decoration: none;
+}

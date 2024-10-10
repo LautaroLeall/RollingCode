@@ -1,6 +1,8 @@
 html{
-    background-color: silver
+    background-color: silver;
 }
+
+/*NAVBAR*/
 
 #menu{
     margin-left: 2px;
@@ -14,17 +16,7 @@ html{
     padding-right: 100px;
 }
 
-#centro {
-    border : 5px outset #a40c0ccd;
-    font-size: 20px;
-    color: brown;
-    padding: 10px;
-}
-
-p{
-    font-size: 15px;
-    color: rgba(69, 3, 3, 0.875);
-}
+/*MAIN*/
 
 h1{
     font-size: 35px;
@@ -32,20 +24,36 @@ h1{
     text-align: center;
 }
 
-#myfooter{
-    font-size: 15px;
-    text-decoration: none;
+#centro {
+    border : 5px outset #a40c0ccd;
+    font-size: 20px;
+    color: brown;
+    padding: 10px;
+}
+
+h4{
+    padding-left: 15px;
 }
 
 .content{
     padding-left: 25%;
 }
+
+
+p{
+    font-size: 15px;
+    color: rgba(69, 3, 3, 0.875);
+}
+
 #puntuacion{
     color: #0000008b;
     font-size: 20px;
     padding-left: 85%;
 }
 
-h4{
-    padding-left: 15px;
+/*FOOTER*/
+
+#myfooter{
+    font-size: 15px;
+    text-decoration: none;
 }
