@@ -4,7 +4,7 @@ html{
 
 /*NAVBAR*/
 
-#menu{
+#nav{
     font-size: 13px;
     text-align: center;
     position: fixed;
@@ -31,9 +31,13 @@ h1{
 
 /*FOOTER*/
 
+footer{
+    margin-left: 10px;
+}
+
 #myfooter p{
     position: relative;
-    left: 80vw;
+    left: 75vw;
     font-size: 15px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;  
     width: 210px;
