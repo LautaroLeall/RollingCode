@@ -1,13 +1,50 @@
-body{
-    background-color: aquamarine;
+html{
+    background-color: silver;
 }
 
-header{
+/*NAVBAR*/
+
+#menu{
+    font-size: 13px;
     text-align: center;
-    color: brown;
-    font-size: 25px;
+    position: fixed;
+    top: 0;
+    left: 15vw;
+    background: rgba(255, 25, 25, 0.553);
+    margin: 10px;
 }
 
-iframe{
-    border: 2px double black;
+.menus{
+    text-decoration: none;
+    color: #fff;
+    padding-right: 100px;
 }
+
+/*MAIN*/
+
+h1{
+    margin-top: 50px;
+    font-size: 35px;
+    color: brown;
+    text-align: center;
+}
+
+/*FOOTER*/
+
+#myfooter p{
+    position: relative;
+    left: 80vw;
+    font-size: 15px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;  
+    width: 210px;
+    font-weight: bold;
+    color: brown;
+}
+
+#myfooter a{
+    margin-left: 59px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: brown;
+} 
