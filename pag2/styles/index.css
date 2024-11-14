@@ -60,9 +60,8 @@ p{
 
 /*FOOTER*/
 
-#myfooter{
-    background-color: #00000056;
-    padding-left: 10px;
+footer{
+    margin-left: 10px;
 }
 
 #myfooter p{
@@ -82,7 +81,3 @@ p{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: brown;
 } 
-
-#nyfooter .direc{
-    margin: 50px;
-}
