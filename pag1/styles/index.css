@@ -1,0 +1,100 @@
+/*NAVBAR*/
+
+nav h1{
+    font-size: 40px;
+    position: fixed;
+    top: -20px;
+    left: 27vw;
+    z-index: 1;
+    background-color: hsla(184, 63%, 26%, 0.308);
+    border: 2px dotted  hsl(0, 20%, 27%);
+    text-align: center;
+    color: #393764cc;
+}
+
+.presentacion, .listas, .tablas {
+    position: relative;
+    margin: 50px;
+    box-shadow: 2px 2px 20px 17px #162fd278;
+    margin-top: 100px !important;
+}
+
+/*PRESENTATION*/
+
+.presentacion{
+    background-color: #f5f5f5;
+    border: 2px dotted hsl(0, 20%, 27%);
+    padding: 20px;
+    width: 250px; 
+    height: auto;
+}
+
+.presentacion h2{
+    text-align: center;
+    color: #393764cc;
+}
+
+.presentacion p{
+    text-align: justify;
+    color: #393764cc;
+}
+
+.presentacion a{
+    color: #19686d;
+    text-decoration: none;
+    padding-left: 80px;
+}
+
+.presentacion a:hover{
+    color: hwb(0 4% 38% / 0.914);
+}
+
+.presentacion img{
+    width: 100px;
+    height: auto;
+    align-items: center;
+    padding-left: 65px;
+}
+
+/*LISTAS*/
+
+.listas{
+    background-color: #f5f5f5;
+    border: 2px dotted hsl(0, 20%, 27%);
+    padding: 20px;
+    width: 250px; 
+    height: auto;
+    position: relative;
+    top: -450px;
+    left: 400px;
+}
+
+.listas ul{
+    color: #393764cc;
+}
+
+.listas ol{
+    margin: 10px;
+    color: hsla(243, 85%, 16%, 0.862);
+}
+
+/*TABLAS*/
+
+.tablas{
+    background-color: #f5f5f5;
+    border: 2px dotted hsl(0, 20%, 27%);
+    padding: 20px;
+    width: 250px; 
+    height: auto;
+    position: relative;
+    top: -760px;
+    left: 800px;
+}
+
+.tablas th{
+    color: #393764cc;
+}
+
+.tablas tr td{
+    color: hsla(243, 85%, 16%, 0.862);
+}
