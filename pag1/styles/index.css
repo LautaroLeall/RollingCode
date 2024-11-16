@@ -39,21 +39,35 @@ nav h1{
     color: #393764cc;
 }
 
-.presentacion a{
+.presentacion .link-ing{
     color: #19686d;
     text-decoration: none;
     padding-left: 80px;
 }
 
-.presentacion a:hover{
+.presentacion .link-ing:hover{
     color: hwb(0 4% 38% / 0.914);
 }
 
-.presentacion img{
+.presentacion .link-img{
+    width: 10px;
+    height: auto;
+    padding-left: 65px;
+}
+
+.presentacion .link-img img{
+    padding-top: 5px;
+    filter: grayscale(100%);
     width: 100px;
     height: auto;
-    align-items: center;
-    padding-left: 65px;
+    border-radius: 100%;
+    transition: transform 0.3s;
+}
+
+.presentacion .link-img img:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s;
+    filter: grayscale(0%);
 }
 
 /*LISTAS*/
@@ -89,12 +103,22 @@ nav h1{
     position: relative;
     top: -760px;
     left: 800px;
+    align-items: center;
 }
 
-.tablas th{
+.cabecera{
+    padding-left: 35px !important;
     color: #393764cc;
 }
 
-.tablas tr td{
-    color: hsla(243, 85%, 16%, 0.862);
+.logo{
+    width: 80px;
+    height: auto;
+    padding-left: 50px;
+    transition: transform 0.3s;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+    transition: transform 0.3s;
 }
