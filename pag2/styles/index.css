@@ -40,10 +40,13 @@ h4{
     padding-left: 15px;
 }
 
-.content{
+.img-hombre{
     padding-left: 25%;
 }
 
+.video-youtube{
+    padding-left: 25%;
+}
 
 p{
     font-size: 15px;
@@ -80,4 +83,27 @@ footer{
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: brown;
-} 
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 600px) {
+    #nav{
+        left: 0;
+    }
+    .menus{
+        padding-right: 50px;
+    }
+    .img-hombre{
+        position: relative;
+        left: -140px;
+        width: auto;
+    }
+    .video-youtube{
+        position: relative;
+        left: -140px;
+    }
+    #myfooter p{
+        left: 60vw;
+    }
+}
