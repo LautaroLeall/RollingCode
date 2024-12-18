@@ -1,0 +1,140 @@
+/* CSS PARA CELULAR */
+
+/*VARIABLES*/
+:root{    
+    --colornavbar:hsla(0, 17%, 17%, 0.314);
+    --colorprincipal:hwb(0 40% 51% / 0.524);
+    --colorsecundario:hsla(0, 0%, 0%, 0.685);
+    --colorblanco:hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*NAVBAR*/
+.nav{
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    background-color: var(--colornavbar);
+}
+
+.nav h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    position: relative;
+    top: 8px;
+    left: 20px;
+}
+
+.nav img{
+    display: flex;
+    position: relative;
+    left: -250px;
+    top: 4px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+    filter: grayscale(1);
+}
+
+.nav img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+    transition: 0.5s ease-in-out;
+}
+
+/*MAIN*/
+.contenedor{
+    padding-top: 50px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--colorprincipal);
+}
+
+.card{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    background-color: var(--colorsecundario);
+}
+
+.card img{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    left: 75px;
+    filter: grayscale(1);
+    transition: 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+    transition: 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: var(--colorblanco);
+    margin-top: 20px;
+}
+
+/*FOOTER*/
+
+/*RESPONSIVE PARA COMPUTADORA*/
+/* Que el navegador tenga al menos 768px de ancho */
+@media (min-width: 768px) {
+    .nav{
+        height: 70px;
+    }
+
+    .nav h1{
+        font-size: 35px;
+        top: 15px;
+    }
+
+    .nav img{
+        width: 60px;
+        height: 60px;
+        top: 5px;
+        left: -580px;
+    }
+
+    .contenedor{
+        padding-top: 80px;
+    }
+
+    .card{
+        flex-direction: row;
+        width: 400px;
+        height: 200px;
+    }
+
+    .card img{
+        width: 150px;
+        height: 150px;
+        left: -5px;
+        top: 20px;
+    }
+
+    .text{
+        margin-left: 20px;
+        margin-top: 40px;
+    }
+}
