@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+    margin-top: 50vh;
+    font-size: 20px;
+    color: brown;
+    }
+
+/*RESPONSIVE*/
+/* Que el navegador tenga al menos 768px de ancho */
+@media (min-width: 768px) {
+    h1{
+    font-size: 30px;
+    }
+}
