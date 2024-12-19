@@ -56,44 +56,42 @@
 }
 
 /*MAIN*/
-.contenedor{
-    padding-top: 60px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: var(--colorcontendor);
-}
-
-.card{
-    padding: 10px;
-    margin: 10px;
+.formulario{
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 280px;
-    border-radius: 20%;
-    background-color: var(--colorcard);
+    align-items: center;
+    background-color: var(--colorcontendor);
+    padding-top: 110px;
+    padding-bottom: 120px;
 }
 
-.card img{
-    display: flex;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    position: relative;
-    left: 75px;
-    z-index: 0;
-}
-
-.text{
+.formulario form label{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
-    color: var(--colorblanco);
-    margin-top: 15px;
-    margin-left: 55px;
-    list-style-position: inside;
+    font-size: 17px;
+    color: var(--colorcard);
+    display: flex;
+}
 
+.formulario form input{
+    margin: 10px;
+    padding: 5px;
+    width: 200px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    color: var(--colorcard);
+}
+
+.formulario .submit{
+    display: flex;
+    position: relative;
+    left: 50px;
+    background-color: var(--colorcard);
+    color: var(--colorblanco);
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    margin: 15px;
 }
 
 /*FOOTER*/
@@ -132,6 +130,15 @@
         top: 15px;
     }
 
+    .nav img{
+        width: 60px;
+        height: 60px;
+        top: 5px;
+        left: -580px;
+        filter: grayscale(1);
+        transition: 0.5s ease-in-out;
+    }
+
     .nav h2 a{
         font-size: 15px;
         top: 20px;
@@ -144,53 +151,33 @@
         transition: 0.5s ease-in-out;
         font-size: 20px;
     }
-
-    .nav img{
-        width: 60px;
-        height: 60px;
-        top: 5px;
-        left: -580px;
-        filter: grayscale(1);
-        transition: 0.5s ease-in-out;
-    }
-
+    
     .nav img:hover{
         transform: scale(1.1);
         filter: grayscale(0);
         transition: 0.5s ease-in-out;
     }
 
-    .contenedor{
-        padding-top: 125px;
-        padding-bottom: 63px;
+    .formulario{
+        padding-top: 95px;
+        padding-bottom: 50px;
     }
 
-    .card{
-        flex-direction: row;
-        width: 400px;
-        height: 200px;
-        border-radius: 5%;
+    .formulario form label{
+        font-size: 25px;
     }
 
-    .card img{
+    .formulario form input{
+        text-align: center;
+        width: 300px;
+        font-size: 20px;
+        margin: 15px;
+    }
+
+    .formulario .submit{
+        left: 80px;
         cursor: pointer;
         width: 150px;
-        height: 150px;
-        left: 15px;
-        top: 20px;
-        filter: grayscale(1);
-        transition: 0.5s ease-in-out;
     }
 
-    .card img:hover{
-    transform: scale(1.1);
-    filter: grayscale(0);
-    transition: 0.5s ease-in-out;
-    z-index: 0;
-    }
-
-    .text{
-        margin-top: 40px;
-    }
-    
 }
