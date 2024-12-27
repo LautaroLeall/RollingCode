@@ -1,0 +1,37 @@
+/*VARIABLES*/
+:root{
+    --colorpurple:#3B1F2B;
+    --colorred:#DB162F;
+    --colorvanilla:#DBDFAC;
+    --colorgray:#5F758E;
+    --colorblue:#383961;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*BODY*/
+body{
+    background-color:var(--colorvanilla) !important;
+}
+
+/*HEADER*/
+/*NAVBAR*/
+nav{
+    background-color: var(--colorgray);
+}
+
+.logo{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+/*MAIN*/
+/*CARD*/
+div .card{
+    width: 18rem;
+    background-color: var(--colorblue);
+}
