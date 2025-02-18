@@ -24,15 +24,40 @@ nav{
 }
 
 .logo{
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+    transition: 0.5s ease-in-out;
 }
 
 /*MAIN*/
 /*CARD*/
-div .card{
-    width: 18rem;
+div.card{
     background-color: var(--colorblue);
+    border-radius: 20px;
 }
 
+img.card-img-top{
+    border-radius: 30px;
+}
+
+a.card-btn{
+    background: var(--colorgray);
+    transition: 0.5s ease-in-out;
+}
+
+a.card-btn:hover{
+    background: var(--colorpurple);
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+
+/*FOOTER*/
+footer{
+    background-color: var(--colorpurple);
+}
