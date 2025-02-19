@@ -61,3 +61,12 @@ a.card-btn:hover{
 footer{
     background-color: var(--colorpurple);
 }
+
+a.icon-link {
+    transition: 0.5s ease-in-out;
+}
+
+a.icon-link:hover{
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
+}
