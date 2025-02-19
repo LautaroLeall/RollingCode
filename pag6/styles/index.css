@@ -36,6 +36,11 @@ nav{
 }
 
 /*MAIN*/
+/*CAROUSEL*/
+.img-carrousel{
+    height: 65vh;
+}
+
 /*CARD*/
 div.card{
     background-color: var(--colorblue);
