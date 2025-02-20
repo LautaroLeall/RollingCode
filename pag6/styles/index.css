@@ -41,6 +41,20 @@ nav{
     height: 65vh;
 }
 
+.titulo-carrousel{
+    background-color: var(--colorblue);
+    width: 135px;
+    position: relative;
+    left: 450px;
+}
+
+.p-carrousel{
+    background-color: var(--colorblue);
+    width: 430px;
+    position: relative;
+    left: 300px;
+}
+
 /*CARD*/
 div.card{
     background-color: var(--colorblue);
