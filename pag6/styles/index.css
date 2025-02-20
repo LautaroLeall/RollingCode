@@ -36,6 +36,25 @@ nav{
 }
 
 /*MAIN*/
+/*CAROUSEL*/
+.img-carrousel{
+    height: 65vh;
+}
+
+.titulo-carrousel{
+    background-color: var(--colorblue);
+    width: 135px;
+    position: relative;
+    left: 450px;
+}
+
+.p-carrousel{
+    background-color: var(--colorblue);
+    width: 430px;
+    position: relative;
+    left: 300px;
+}
+
 /*CARD*/
 div.card{
     background-color: var(--colorblue);
@@ -60,4 +79,13 @@ a.card-btn:hover{
 /*FOOTER*/
 footer{
     background-color: var(--colorpurple);
+}
+
+a.icon-link {
+    transition: 0.5s ease-in-out;
+}
+
+a.icon-link:hover{
+    transform: scale(1.3);
+    transition: 0.5s ease-in-out;
 }
