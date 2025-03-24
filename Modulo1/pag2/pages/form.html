@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO</title>
+    <link rel="icon" href="/Modulo1/pag2/assets/cine.png">
+    <link rel="stylesheet" href="/Modulo1/pag2/styles/form.css">
+</head>
+
+<body>
+    <header #inicio>
+        <nav id="nav">
+            <ul>
+                <a class="menus" href="/Modulo1/pag2/index.html">INICIO</a>
+                <a class="menus" href="/Modulo1/pag2/pages/pelicula.html">PELICULA</a>
+                <a class="menus" href="/Modulo1/pag2/index.html#trailer">TRAILER</a>
+                <a class="menus" href="/Modulo1/pag2/index.html#resumen">RESUMEN</a>
+                <a class="menus" href="/Modulo1/pag2/pages/form.html">FORMULARIO</a>
+            </ul>
+        </nav>
+        <main>
+            <h1>FORMULARIO</h1>
+            <hr>
+            <div class="form">
+                <form>
+                    <label for="name">NOMBRE</label>
+                    <input name="name" type="text" id="name" placeholder="Escribe tu nombre" value="" maxlength="10"
+                        minlength="3" required />
+                    <label for="apellido">APELLIDO</label>
+                    <input name="apellido" type="text" id="apellido" placeholder="Escribe tu apellido" value=""
+                        maxlength="15" minlength="3" required /><br>
+                    <br><label for="age">EDAD</label>
+                    <input name="edad" type="number" id="age" placeholder="Edad" value="" min="18" max="100"
+                        required /><br>
+                    <br><label for="email">EMAIL</label>
+                    <input name="email" type="email" id="email" placeholder="Escribe tu Correo Electronico" value=""
+                        maxlength="30" minlength="12" required /><br>
+                    <br><label for="contra"></label>
+                    <input name="contraseña" type="password" id="contra" placeholder="CONTRASEÑA" value=""
+                        maxlength="15" minlength="8" required /><br>
+                    <br><textarea name="comment" id="comment" maxlength="50" cols="30" rows="13"
+                        placeholder="Escribe tu Comentario" value=""></textarea><br>
+                    QUE TAL LE PARECIO LA PAGINA
+                    <select name="like" id="like" required>
+                        <option></option>
+                        <option>MALA</option>
+                        <option>REGULAR</option>
+                        <option>BUENA</option>
+                        <option>MUY BUENA</option>
+                        <option>EXCELENTE</option>
+                    </select><br>
+                    <br><label for="noinfo">GENERO:</label>
+                    <br><input type="radio" name="genero" id="hombre" />
+                    <label for="hombre">HOMBRE</label>
+                    <br><input type="radio" name="genero" id="mujer" />
+                    <label for="mujer">MUJER</label>
+                    <br><input type="radio" name="genero" id="noinfo" />
+                    <label for="noinfo">NO INFO</label><br>
+                    <br><input type="checkbox" name="terminos" id="terminos" required />
+                    <label for="terminos">Acepto los terminos y Condiciones</label><br>
+                    <br><input type="submit" value="Enviar" />
+                </form>
+            </div>
+        </main>
+        <hr>
+        <footer id="myfooter">
+            <p>Creada por Lautaro Leal</p><br>
+            <a href="https://www.google.com/maps/place/Don+Bosco+3172,+T4000DMJ+San+Miguel+de+Tucum%C3%A1n,+Tucum%C3%A1n/@-26.818487,-65.243434,15z/data=!4m6!3m5!1s0x94225cf74ff9371b:0x6567baad96d0e761!8m2!3d-26.8184875!4d-65.2434337!16s%2Fg%2F11fvr221kd?hl=es-419&entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"><small id="direc">Don Bosco 3172</small></a>
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.6746130013285!2d-65.24600862641549!3d-26.818487476703414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225cf74ff9371b%3A0x6567baad96d0e761!2sDon%20Bosco%203172%2C%20T4000DMJ%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1726961055516!5m2!1ses-419!2sar"
+                width="300" height="150" frameborder="5" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </footer>
+        <hr>
+</body>
+
+</html>
