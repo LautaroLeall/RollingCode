@@ -10,7 +10,7 @@
 - Metodologias Agiles 
 - Git 
 - GitHub 
-- JavaScript - 
+- JavaScript 
 ##### *Modulo 3*
 - React
 ##### *Modulo 4*
