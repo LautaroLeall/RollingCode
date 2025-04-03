@@ -37,7 +37,7 @@ console.log("El resultado de la division de 10 y 5 es igual a " + division);
 let resto = 5 % 2;
 console.log("El resultado del resto de 5 y 2 es igual a " + resto);
 
-// Operadores uniarios
+// Operadores unitarios
 //Incremento
 let incremento = 5;
 incremento++;
@@ -53,7 +53,7 @@ console.log("El valor de b es igual a " + b);
 
 // Operadores condicionales
 // Operadores relacionales
-// Mayor o igual que
+// Mayor que
 let mayor = 12 > 18;
 console.log("El numero 12 es mayor que 18 " + mayor);
 // Menor que
