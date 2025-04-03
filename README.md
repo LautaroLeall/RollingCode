@@ -3,7 +3,7 @@
 ### Clases
 ##### *Modulo 1*
 - **Front End**
--  HTML 
+- HTML 
 - CSS 
 - Booststrap 
 ##### *Modulo 2*
