@@ -88,7 +88,7 @@ console.log(randomNum);
 
 const randomNum1 = Math.random();
 console.log(randomNum1 * 10); // numero aleatorio entre 0 y 10
-console.log(Math.round(randomNum1 * 10)); // numero aleatorio entre 0 y 10 (numero entero)
+console.log(Math.round(randomNum1)); // convierte en numero entero
 
 // Condicional IF
 let aux = 10;
