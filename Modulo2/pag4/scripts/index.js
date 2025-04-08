@@ -87,5 +87,19 @@ array.splice(0);
 document.write("El array completo es " + array);
 // El array completo quedaria vacio
 
-// ME QUEDE EN LA HORA 1
-// MINUTO 35
+// FUNCIONES
+// declare una funcion llamada suma
+function suma (num1, num2) {
+    // num1 y num2 son los parametros de la funcion
+    return num1 + num2;
+}
+
+// llamar a la funcion suma
+let resultado = suma(10, 20);
+// 10 y 20 son los argumentos de la funcion
+alert("El resultado de la suma es " + resultado);
+
+function saludar (nombre) {
+    alert(`Hola ${nombre} bienvenido a mi pagina`);
+}
+saludar (prompt("Ingresa tu nombre"));
