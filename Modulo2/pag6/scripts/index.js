@@ -1,7 +1,7 @@
 // POO (Programacion Orientada a Objetos)
 
 // CREANDO OBJETO
-const persona = {
+const usuario = {
     nombre: "Lautaro",
     apellido: "Leal Del Prete",
     edad: 20,
@@ -12,32 +12,32 @@ const persona = {
 
 // OBTENER DATOS DE UN OBJETO (dos maneras)
 // 1.
-alert(`El nombre del usuario es ${persona.nombre}`)
+alert(`El nombre del usuario es ${usuario.nombre}`)
 // 2.
-alert(`El apellido del usuario es ${persona["apellido"]}`);
+alert(`El apellido del usuario es ${usuario["apellido"]}`);
 
 // MODIFICAR DATOS DE UN OBJETO
 // Agregar propiedad 
-persona.membresia = true;
+usuario.membresia = true;
 // Modificar valor
-persona.membresia = false;
+usuario.membresia = false;
 // Eliminar propiedad
-delete persona.membresia;
+delete usuario.membresia;
 
 // RECORRIENDO DATOS DE UN OBJETO (dos maneras)
 // 1.
-for (const key in persona) {
-    if (persona.hasOwnProperty(key)) {
+for (const key in usuario) {
+    if (usuario.hasOwnProperty(key)) {
         // hasOwnProperty → devuelve un valor booleano que indica si el objeto tiene la propiedad especificada como propio 
-        console.log(persona[key]);
+        console.log(usuario[key]);
     }
 }
 // 2.
-const keys = Object.keys(persona);
+const keys = Object.keys(usuario);
 console.log(keys);
 // Nos devuelve un array con los nombres de las propiedades del objeto
 keys.map((key) => {
-    console.log(persona[key]);
+    console.log(usuario[key]);
     // Nos devuelve el valor de la propiedad
 })
 
@@ -137,3 +137,32 @@ console.log(mascota1 === mascota2); // imprime false
 
 const mascota3 = mascota1;
 console.log(mascota3 === mascota1); // imprime true
+console.log(mascota3); // imprime un objeto (mismo al mascota1)
+
+// ELEMENTOS DE LA POO
+// - CLASES
+class Persona {
+    constructor(nombre, apellido, edad, pais) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.pais = pais;
+    }
+    // MÉTODOS
+    comer(){
+        alert(`${this.nombre} esta comiendo`);
+    }
+}
+console.log(Persona);
+
+// Se crea un objeto de la clase Persona
+const persona1 = new Persona("Lautaro", "Leal Del Prete", 20, "Argentina");
+console.log(persona1);
+persona1.comer();
+// para que se ejecuten los metodos deben finalizar con ();
+
+const persona2 = new Persona("Gonzalo", "Martinez", 20, "Argentina");
+console.log(persona2);
+persona2.comer();
+
+console.log(`Los dos objetos son iguales? ${persona1 === persona2}`); // imprime false
