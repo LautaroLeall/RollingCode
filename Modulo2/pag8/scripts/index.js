@@ -1,5 +1,4 @@
 // Objetos que podemos acceder mediante al BOM
-
 // WINDOW
 // window seria el objeto
 
@@ -38,5 +37,35 @@ console.log(window.screen.availHeight);
 console.log(window.screen.colorDepth);
 console.log(window.screen.orientation);
 
-// clase no terminada 
-// 1:00:52
+// Funciones para Manejar el Tiempo con BOM
+
+//setIterval
+// recibe una funcion CALLBACK y un tiempo en milisegundos
+const interval = setInterval(() => {
+    console.log("Hola soy un SetInterval");
+}, 2000)
+// se ejecuta cada 2 segundos (se ejecuta 7 veces hasta utilizar el clearInterval)
+
+//setTimeout
+// recibe una funcion CALLBACK y un tiempo en milisegundos (se ejecuta solo una vez)
+setTimeout(() => {
+    console.log("Hola soy un SetTimeout");
+}, 5000)
+// se ejecuta despues de 5 segundos
+
+//clearInterval
+// recibe un intervalo que se ha creado con setInterval
+setTimeout(() => {
+    console.log("Aca cortamos el SetInterval");
+    clearInterval(interval);
+}, 14000)
+// se ejecuta despues de 14 segundos y corta el SetInterval
+
+// DOM
+// DOM es un lenguaje de programacion que nos permite manipular el HTML
+
+// Acceder a los elementos del DOM
+document.body.innerText = "Hola Mundo soy un innerText"
+document.body.innerHTML += "<h1>Hola Mundo soy un innerHTML</h1>"
+// con el inerHTML podemos insertar HTML (insertar nuevos nodos, nuevos elementos HTML)
+
