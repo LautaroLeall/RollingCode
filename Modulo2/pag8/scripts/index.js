@@ -65,7 +65,7 @@ setTimeout(() => {
 // DOM es un lenguaje de programacion que nos permite manipular el HTML
 
 // Acceder a los elementos del DOM
-document.body.innerText = "Hola Mundo soy un innerText"
+document.body.innerText += "Hola Mundo soy un innerText"
 document.body.innerHTML += "<h1>Hola Mundo soy un innerHTML</h1>"
 // con el inerHTML podemos insertar HTML (insertar nuevos nodos, nuevos elementos HTML)
 
