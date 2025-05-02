@@ -42,21 +42,21 @@ console.log(window.screen.orientation);
 //setIterval
 // recibe una funcion CALLBACK y un tiempo en milisegundos
 const interval = setInterval(() => {
-    document.write("Hola soy un SetInterval <br>");
+    console.log("Hola soy un SetInterval");
 }, 2000)
 // se ejecuta cada 2 segundos (se ejecuta 7 veces hasta utilizar el clearInterval)
 
 //setTimeout
 // recibe una funcion CALLBACK y un tiempo en milisegundos (se ejecuta solo una vez)
 setTimeout(() => {
-    document.write("Hola soy un SetTimeout <br>");
+    console.log("Hola soy un SetTimeout>");
 }, 5000)
 // se ejecuta despues de 5 segundos / despues de ejecutarse dos veces el SetInterval
 
 //clearInterval
 // recibe un intervalo que se ha creado con setInterval
 setTimeout(() => {
-    document.write("Aca cortamos el SetInterval");
+    console.log("Aca cortamos el SetInterval");
     clearInterval(interval);
 }, 14000)
 // se ejecuta despues de 14 segundos y corta el SetInterval
@@ -67,15 +67,23 @@ setTimeout(() => {
 // document seria el objeto
 
 // Acceder a los elementos del DOM
-document.body.innerText += "Hola Mundo soy un innerText"
-document.body.innerHTML += "<h1>Hola Mundo soy un innerHTML</h1>"
+document.body.innerText += "Hola Mundo soy un innerText";
+document.body.innerHTML += "<h1>Hola Mundo soy un innerHTML</h1>";
 // con el inerHTML podemos insertar HTML (insertar nuevos nodos, nuevos elementos HTML)
 
 // Seleccionando Elementos del DOM
-// document.getElementById("class-");
-// document.querySelector("#id");
-// document.getElementsByClassName("classname");
-// document.querySelector(".classname");
-console.log(document.getElementById("p"));
+const elemento = document.getElementsByTagName('h1');
+console.log(elemento);
 
-// 1 : 30 : 04
+const elementos = document.getElementsByTagName('p');
+console.log(elementos);
+// con el getElementByTagName podemos seleccionar un elemento por su tag (NOS DEVUELVE UN ARRARY DE ELEMENTOS)
+
+const clase = document.getElementsByClassName('title-main');
+console.log(clase);
+// con el getElementByClassName podemos seleccionar un elemento por su clase (NOS DEVUELVE UN ARRARY DE ELEMENTOS)
+
+const id = document.getElementById('black-text');
+console.log(id);
+// con el getElementById podemos seleccionar un elemento por su id (NOS DEVUELVE EL ELEMENTO UNICO CON TODA SU INFORMACION)
+
