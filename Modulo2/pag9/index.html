@@ -5,11 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 9 de js</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
     <header>
-        <h1 id="title">Modulo 2</h1>
+        <div class="container-header">
+            <h1 id="title">Modulo 2</h1>
+            <div class="container-botones">
+                <button onclick="modoOscuro()">Camabiar a modo oscuro</button>
+                <button onclick="modoClaro()">Cambiar a modo claro</button>
+            </div>
+        </div>
     </header>
     <main>
         <h3 id="title-main">Clase 9 de Javascript</h3>
@@ -19,6 +26,14 @@
         </i>
         <p class="removed-p">Este texto debe desaparecer</p>
         <p class="replaced-p">Este texto debe ser reemplazado por algun texto del DOM</p>
+        <button onclick="saludar()">
+            Para pedir Saludo
+        </button>
+        <button onmouseover="document.bgColor = 'lightgreen'" onmouseout="document.bgColor = 'white'">
+            Para cambiar el color del fondo del documento
+        </button>
+        <button onclick="document.getElementById('demo').innerHTML = Date()">Fecha - Hora - Argentina</button>
+        <p id="demo"></p>
     </main>
     <footer></footer>
 </body>
