@@ -23,13 +23,14 @@ const User = function (name, lastName, email, userName, password) {
     this.password = password;
 };
 // Obtener los datos del formulario
-// Evento Tradicional
-let nombre;
-let apellido;
-let email;
-let userName;
-let password;
-let repeatPassword;
+// Evento Avanzado
+let nombre = document.getElementById("name");
+let apellido = document.getElementById("lastName");
+let email = document.getElementById("email");
+let userName = document.getElementById("userName");
+let password = document.getElementById("password");
+let repeatPassword = document.getElementById("repeatPassword");
+const form = document.getElementById("formulario");
 
 const handleName = (event) => {
     if (event.target.value.length < 3 || event.target.value.length > 15) {
@@ -91,9 +92,18 @@ const handleRepeatPassword = (event) => {
 const handleSubmit = (event) => {
     event.preventDefault(); // Evitar que se envie el formulario (se recarga la página)
     console.log("Formulario enviado");
-    const usuario = new User (nombre, apellido, email, userName, password); // Usuario creado
+    const usuario = new User(nombre, apellido, email, userName, password); // Usuario creado
     localStorage.setItem("usuario", JSON.stringify(usuario)); // Almacenar usuario en localStorage
     // setItem(key, value) almacena la cadena de texto en localStorage
     // "usuario" es el nombre del objeto que se almacena en localStorage
     // JSON.stringify(usuario) convierte el objeto en una cadena de texto
 }
+
+nombre.addEventListener("blur", handleName);
+apellido.addEventListener("blur", handleLastName);
+email.addEventListener("blur", handleEmail);
+userName.addEventListener("blur", handleUserName);
+password.addEventListener("blur", handlePassword);
+repeatPassword.addEventListener("blur", handleRepeatPassword);
+form.addEventListener("submit", handleSubmit);
+
