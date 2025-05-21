@@ -92,5 +92,8 @@ const handleSubmit = (event) => {
     event.preventDefault(); // Evitar que se envie el formulario (se recarga la página)
     console.log("Formulario enviado");
     const usuario = new User (nombre, apellido, email, userName, password); // Usuario creado
-    console.log(usuario);
+    localStorage.setItem("usuario", JSON.stringify(usuario)); // Almacenar usuario en localStorage
+    // setItem(key, value) almacena la cadena de texto en localStorage
+    // "usuario" es el nombre del objeto que se almacena en localStorage
+    // JSON.stringify(usuario) convierte el objeto en una cadena de texto
 }
