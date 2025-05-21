@@ -1,0 +1,10 @@
+*{
+    margin: 0 5px;
+}
+
+
+.eventos{
+    gap: 15px;
+    display: flex;
+    margin-bottom: 20px;
+}

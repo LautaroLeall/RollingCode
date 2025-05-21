@@ -1,0 +1,11 @@
+.container-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-botones {
+    width: 25%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
