@@ -38,7 +38,7 @@ const hadleChange = (event) => {
         // (?=.*[A-Z]) → al menos una letra mayúscula
         // (?=.*\d) → al menos un número
         // (?=.*[^A-Za-z0-9]) → al menos un carácter especial
-        // .{8,15} → longitud entre 8 y 15 caracteres
+        // .{8,25} → longitud entre 8 y 25 caracteres
     switch (event.target.id) {
         case "name":
             if (regexNames.test(event.target.value)) {
@@ -86,11 +86,14 @@ const hadleChange = (event) => {
 }
 
 const handleSubmit = (event) => {
-    event.preventDefault(); // Evitar que se envie el formulario (se recarga la página)
-    console.log("Formulario enviado");
-    localStorage.setItem("user", usuario); // Almacenar usuario en localStorage
+    event.preventDefault(); // Evitar que se envie el formulario (se recargue la página)
+    const userSerializado = JSON.stringify(user); // Convierte el objeto en una cadena de texto
+    localStorage.setItem("user", userSerializado); // Almacena el objeto en el navegador (se guarda siempre)
+    sessionStorage.setItem("user", userSerializado); // Almacena el objeto en la sesión (se borra al cerrar la página)
 }
 
 const user1 = new User("Juan", "Perez", "juanperez@gmail.com", "juan_perez", "Test-123");
-const user1Json = JSON.stringify(user1); // Convierte el objeto en una cadena de texto
-console.log(JSON.parse(user1Json)); // Convierte la cadena de texto en un objeto
+console.log(user1Json); // Imprime la cadena de texto
+const userReconstruido = JSON.parse(userSerializado); // Convierte la cadena de texto en un objeto
+console.log(user1Json2); // Imprime el objeto
+

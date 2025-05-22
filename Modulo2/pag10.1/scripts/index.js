@@ -92,7 +92,7 @@ const handleRepeatPassword = (event) => {
 }
 
 const handleSubmit = (event) => {
-    event.preventDefault(); // Evitar que se envie el formulario (se recarga la página)
+    event.preventDefault(); // Evitar que se envie el formulario (se recargue la página)
     console.log("Formulario enviado");
     const usuario = new User(nombre, apellido, email, userName, password); // Usuario creado
     localStorage.setItem("usuario", JSON.stringify(usuario)); // Almacenar usuario en localStorage
