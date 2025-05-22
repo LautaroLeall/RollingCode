@@ -1,0 +1,96 @@
+// FORMULARIO 
+// Objeto de Formulario (Usuario)
+// Clase Constructora
+class User {
+    constructor(name, lastName, email, userName, password) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.userName = userName;
+        this.password = password;
+    }
+};
+const user = new User();
+
+const hadleChange = (event) => {
+    user[event.target.id] = event.target.value; // Asignar/Capturar el valor al objeto
+    // user[event.target.id] accedemos al objeto user y buscamos su id
+    // Es decir si el id es name, asignar el valor al name (nombre)
+    // Si no existe el id, crea un atributo con el id y asigna el valor
+
+    // EXPRECION REGULAR PARA VALIDAR EL FORMULARIO / INPUTS
+    const regexNames = /^[A-Za-z\s]{3,15}$/;
+    // Valida nombres que:
+        // Solo tengan letras (mayúsculas o minúsculas) y espacios.
+        // Tengan entre 3 y 15 caracteres.
+    const regexEmail = /^[\w]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)*(\.[a-z]{2,4})$/;
+    // Valida emails con el formato:
+        // Letras, números o guiones bajos, opcionalmente separados por puntos.
+        // Seguido de @ y un dominio con puntos.
+        // Termina en una extensión de 2 a 4 letras minúsculas (ej: .com, .net).
+    const regexUserName = /^[A-Za-z0-9_-]{5,20}$/;
+    // Valida nombres de usuario con el formato:
+        // Letras, números o guiones bajos, opcionalmente separados por guiones.
+        // Tienen entre 5 y 20 caracteres.
+    const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,25}$/;
+    // Valida contraseñas con el formato:
+        // (?=.*[a-z]) → al menos una letra minúscula
+        // (?=.*[A-Z]) → al menos una letra mayúscula
+        // (?=.*\d) → al menos un número
+        // (?=.*[^A-Za-z0-9]) → al menos un carácter especial
+        // .{8,15} → longitud entre 8 y 15 caracteres
+    switch (event.target.id) {
+        case "name":
+            if (regexNames.test(event.target.value)) {
+                // .test(value) devuelve true si el valor coincide con la expresión regular
+                user.name = event.target.value.toUpperCase();
+            } else {
+                // Si no coincide con la expresión regular
+                alert("El nombre debe contener entre 3 y 15 caracteres, y solo letras");
+            }
+            break;
+        case "lastName":
+            if (regexNames.test(event.target.value)) {
+                user.lastName = event.target.value.toUpperCase();
+            } else {
+                alert("El apellido debe contener entre 3 y 15 caracteres, y solo letras");
+            }
+            break;
+        case "email":
+            if (regexEmail.test(event.target.value)) {
+                user.email = event.target.value.toLowerCase();
+            } else {
+                alert("El email debe ser valido (ej: nombre@dominio.com)");
+            }
+            break;
+        case "userName":
+            if (regexUserName.test(event.target.value)) {
+                user.userName = event.target.value;
+            } else {
+                alert("El nombre de usuario debe tener entre 5 y 20 caracteres, letras, números o guiones");
+            }
+            break;
+        case "password":
+            if (regexPassword.test(event.target.value)) {
+                user.password = event.target.value;
+            } else {
+                alert("La contraseña debe contener una letra mayúscula, una letra minúscula, un número y una carácter especial (minimo 8 caracteres)");
+            }
+            break;
+        case "repeatPassword":
+            if (user.password !== event.target.value) {
+                alert("Las contraseñas no coinciden");
+            }
+            break;
+    }
+}
+
+const handleSubmit = (event) => {
+    event.preventDefault(); // Evitar que se envie el formulario (se recarga la página)
+    console.log("Formulario enviado");
+    localStorage.setItem("user", usuario); // Almacenar usuario en localStorage
+}
+
+const user1 = new User("Juan", "Perez", "juanperez@gmail.com", "juan_perez", "Test-123");
+const user1Json = JSON.stringify(user1); // Convierte el objeto en una cadena de texto
+console.log(JSON.parse(user1Json)); // Convierte la cadena de texto en un objeto

@@ -15,12 +15,14 @@ myButton.addEventListener("click", saludar);
 // FORMULARIO 
 // Objeto de Formulario (Usuario)
 // Clase Constructora
-const User = function (name, lastName, email, userName, password) {
-    this.name = name;
-    this.lastName = lastName;
-    this.email = email;
-    this.userName = userName;
-    this.password = password;
+class User {
+    constructor (name, lastName, email, userName, password) {
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+        this.userName = userName;
+        this.password = password;
+    }
 };
 // Obtener los datos del formulario
 // Evento Tradicional
