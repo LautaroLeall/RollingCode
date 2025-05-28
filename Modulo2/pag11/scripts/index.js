@@ -10,6 +10,7 @@ class User {
         this.password = password;
     }
 };
+
 const user = new User();
 
 const hadleChange = (event) => {
@@ -34,11 +35,11 @@ const hadleChange = (event) => {
         // Tienen entre 5 y 20 caracteres.
     const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,25}$/;
     // Valida contraseñas con el formato:
-        // (?=.*[a-z]) → al menos una letra minúscula
-        // (?=.*[A-Z]) → al menos una letra mayúscula
-        // (?=.*\d) → al menos un número
-        // (?=.*[^A-Za-z0-9]) → al menos un carácter especial
-        // .{8,25} → longitud entre 8 y 25 caracteres
+        // (?=.*[a-z]) → al menos una letra minúscula.
+        // (?=.*[A-Z]) → al menos una letra mayúscula.
+        // (?=.*\d) → al menos un número.
+        // (?=.*[^A-Za-z0-9]) → al menos un carácter especial.
+        // .{8,25} → longitud entre 8 y 25 caracteres.
     switch (event.target.id) {
         case "name":
             if (regexNames.test(event.target.value)) {
@@ -87,13 +88,19 @@ const hadleChange = (event) => {
 
 const handleSubmit = (event) => {
     event.preventDefault(); // Evitar que se envie el formulario (se recargue la página)
-    const userSerializado = JSON.stringify(user); // Convierte el objeto en una cadena de texto
-    localStorage.setItem("user", userSerializado); // Almacena el objeto en el navegador (se guarda siempre)
-    sessionStorage.setItem("user", userSerializado); // Almacena el objeto en la sesión (se borra al cerrar la página)
+
+    const userSerializado = JSON.stringify(user); // Convierte el objeto en una cadena de texto (JSON)
+    console.log(userSerializado); // Imprime la cadena de texto
+    const userReconstruido = JSON.parse(userSerializado); // Convierte la cadena de texto en un objeto JS
+    console.log(userReconstruido); // Imprime el objeto
+
+    localStorage.setItem("Usuarios", userSerializado); // Almacena el objeto en el navegador (se guarda siempre)
+    sessionStorage.setItem("Usuarios", userSerializado); // Almacena el objeto en la sesión (se borra al cerrar la página)
 }
 
-const user1 = new User("Juan", "Perez", "juanperez@gmail.com", "juan_perez", "Test-123");
-console.log(user1Json); // Imprime la cadena de texto
-const userReconstruido = JSON.parse(userSerializado); // Convierte la cadena de texto en un objeto
-console.log(user1Json2); // Imprime el objeto
-
+// Funciona con LocalStorage y SessionStorage
+// localStorage.clear(); // Borra los datos de localStorage (todos los datos)
+// localStorage.setItem("clave", valor); // Almacena el objeto en el navegador (se guarda siempre)
+// localStorage.getItem("clave"); // Devuelve el objeto almacenado en localStorage
+// localStorage.lenght; // Devuelve la cantidad de objetos almacenados en localStorage
+// localStorage.removeItem("clave"); // Borra el objeto almacenado en localStorage (solo un objeto)
