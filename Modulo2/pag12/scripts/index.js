@@ -32,6 +32,8 @@ const validateSubmit = () => {
     return validations;
 }
 
+const error = document.getElementsByClassName("error");
+
 const hadleChange = (event) => {
     switch (event.target.id) {
         case "name":
@@ -39,70 +41,115 @@ const hadleChange = (event) => {
                 // Si no coincide con la expresión regular
                 alert("El nombre debe contener entre 3 y 15 caracteres, y solo letras");
                 user.name = "";
+                // Texto para mostrar el error
+                error[0].innerHTML = `3-15 Letras, sin números ni símbolos`;
+                error[0].style.color = "rgb(76, 26, 26)";
                 // Estilo para mostrar el error
                 event.target.style.border = "2px solid rgb(76, 26, 26)";
                 event.target.style.boxShadow = "0 0 5px 1px red";
             } else {
                 // .test(value) devuelve true si el valor coincide con la expresión regular
                 user.name = event.target.value.toUpperCase();
+                // Eliminmo el texto del error
+                error[0].innerHTML = "";
                 // Restablecer estilos si el valor es válido
-                event.target.style.border = "1px solid #ccc"; // o el valor por defecto que uses
-                event.target.style.boxShadow = "none";
+                event.target.style.border = "1px solid rgb(18, 71, 18)";
+                event.target.style.boxShadow = "0 0 5px 1px green";
             }
             break;
         case "lastName":
             if (!regexNames.test(event.target.value)) {
                 alert("El apellido debe contener entre 3 y 15 caracteres, y solo letras");
                 user.lastName = "";
+                // Texto para mostrar el error
+                error[1].innerHTML = `3-15 Letras, sin números ni símbolos`;
+                error[1].style.color = "rgb(76, 26, 26)";
                 // Estilo para mostrar el error
-                event.target.style.border = "2px solid red";
+                event.target.style.border = "2px solid rgb(76, 26, 26)";
                 event.target.style.boxShadow = "0 0 5px 1px red";
             } else {
                 user.lastName = event.target.value.toUpperCase();
+                // Eliminmo el texto del error
+                error[1].innerHTML = "";
+                // Restablecer estilos si el valor es válido
+                event.target.style.border = "1px solid rgb(18, 71, 18)";
+                event.target.style.boxShadow = "0 0 5px 1px green";
             }
             break;
         case "email":
             if (!regexEmail.test(event.target.value)) {
                 alert("El email debe ser valido (ej: nombre@dominio.com)");
                 user.email = "";
+                // Texto para mostrar el error
+                error[2].innerHTML = `El email debe ser valido (ej: nombre@dominio.com)`;
+                error[2].style.color = "rgb(76, 26, 26)";
                 // Estilo para mostrar el error
-                event.target.style.border = "2px solid red";
+                event.target.style.border = "2px solid rgb(76, 26, 26)";
                 event.target.style.boxShadow = "0 0 5px 1px red";
             } else {
                 user.email = event.target.value.toLowerCase();
+                // Eliminmo el texto del error
+                error[2].innerHTML = "";
+                // Restablecer estilos si el valor es válido
+                event.target.style.border = "1px solid rgb(18, 71, 18)";
+                event.target.style.boxShadow = "0 0 5px 1px green";
             }
             break;
         case "userName":
             if (!regexUserName.test(event.target.value)) {
                 alert("El nombre de usuario debe tener entre 5 y 20 caracteres, letras, números o guiones");
                 user.userName = "";
+                // Texto para mostrar el error
+                error[3].innerHTML = `5-20 Caracteres: Letras, Números o Guiones`;
+                error[3].style.color = "rgb(76, 26, 26)";
                 // Estilo para mostrar el error
-                event.target.style.border = "2px solid red";
+                event.target.style.border = "2px solid rgb(76, 26, 26)";
                 event.target.style.boxShadow = "0 0 5px 1px red";
             } else {
                 user.userName = event.target.value;
+                // Eliminmo el texto del error
+                error[3].innerHTML = "";
+                // Restablecer estilos si el valor es válido
+                event.target.style.border = "1px solid rgb(18, 71, 18)";
+                event.target.style.boxShadow = "0 0 5px 1px green";
             }
             break;
         case "password":
             if (!regexPassword.test(event.target.value)) {
                 alert("La contraseña debe contener una letra mayúscula, una letra minúscula, un número y una carácter especial (minimo 8 caracteres)");
                 user.password = "";
+                // Texto para mostrar el error
+                error[4].innerHTML = `Mín. 8 caracteres con mayúscula, minúscula, número y símbolo.`;
+                error[4].style.color = "rgb(76, 26, 26)";
                 // Estilo para mostrar el error
-                event.target.style.border = "2px solid red";
+                event.target.style.border = "2px solid rgb(76, 26, 26)";
                 event.target.style.boxShadow = "0 0 5px 1px red";
             } else {
                 user.password = event.target.value;
+                // Eliminmo el texto del error
+                error[4].innerHTML = "";
+                // Restablecer estilos si el valor es válido
+                event.target.style.border = "1px solid rgb(18, 71, 18)";
+                event.target.style.boxShadow = "0 0 5px 1px green";
             }
             break;
         case "repeatPassword":
             if (user.password !== event.target.value) {
                 alert("Las contraseñas no coinciden");
                 user.repeatPassword = "";
+                // Texto para mostrar el error
+                error[5].innerHTML = `Las contraseñas no coinciden`;
+                error[5].style.color = "rgb(76, 26, 26)";
                 // Estilo para mostrar el error
-                event.target.style.border = "2px solid red";
+                event.target.style.border = "2px solid rgb(76, 26, 26)";
                 event.target.style.boxShadow = "0 0 5px 1px red";
             } else {
                 user.repeatPassword = event.target.value;
+                // Eliminmo el texto del error
+                error[5].innerHTML = "";
+                // Restablecer estilos si el valor es válido
+                event.target.style.border = "1px solid rgb(18, 71, 18)";
+                event.target.style.boxShadow = "0 0 5px 1px green";
             }
             break;
     }
@@ -137,5 +184,20 @@ const handleSubmit = (event) => {
         localStorage.setItem("Usuarios", userSerializado); // guardamos el string en el local storage
 
         console.log(userSerializado)
+    }
+}
+
+function togglePassword(id, btn) {
+    const input = document.getElementById(id);
+    const icon = btn.querySelector('i');
+    
+    if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+    } else {
+        input.type = 'password';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
     }
 }
