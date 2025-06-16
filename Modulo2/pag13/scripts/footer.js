@@ -3,7 +3,7 @@
 // Accedemos al elemento que contiene el contenido del footer
 const footer = document.getElementById("footer");
 
-// Incrementamos un navbar de bootstrap a nuestro documento
+// Incrementamos un footer a nuestro documento
 footer.innerHTML += `
     <div class="container-fluid mb-4">
         <div class="row">
