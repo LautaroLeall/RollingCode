@@ -9,8 +9,10 @@ let urlRegister;
 let urlLogin;
 
 // Condicional para asignar las rutas de nuestra pagina <a> </a>
-if (window.location.href == 'http://127.0.0.1:5500/Modulo2/pag13/index.html') {
-    urlHome = 'index.html';
+if (window.location.href == 'http://127.0.0.1:5500/Modulo2/pag13/index.html'
+    || window.location.href == 'http://127.0.0.1:5500/Modulo2/pag13/index.html#'
+    || window.location.href == 'http://127.0.0.1:5500/Modulo2/pag13/index.html?') {
+    urlHome = './index.html';
     urlRegister = './pages/register.html';
     urlLogin = './pages/login.html';
 } else {
