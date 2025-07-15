@@ -1,9 +1,10 @@
 html{
     background-color: #fff;
+    height: 100vh;
 }
 
 *{
-    margin: 5px;
+    margin: 0;
     padding: 0;
 }
 
@@ -15,17 +16,20 @@ body{
 header{
     background: linear-gradient(90deg, rgba(2, 0, 36, 0.797) 0%, rgba(9, 9, 121, 0.804) 51%, rgba(0, 213, 255, 0.736) 100%);
     border: 2px solid;
-    height: 100px;
+    margin: 5px;
+    height: 20vh;
 }
 
 main{
     background-color:rgba(9, 9, 121, 0.804);
     border: 2px solid;
-    height: 250px;
+    margin: 5px;
+    height: 50vh;
 }
 
 footer{
     background: linear-gradient(90deg, rgba(0, 213, 255, 0.736) 0%, rgba(9, 9, 121, 0.804) 51%, rgba(2, 0, 36, 0.797) 100%) ;
     border: 2px solid;
-    height: 100px;
+    margin: 5px;
+    height: 25vh;
 }
