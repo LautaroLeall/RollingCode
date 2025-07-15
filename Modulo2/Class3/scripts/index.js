@@ -128,6 +128,7 @@ while (k <= 10) {
     k++;
 }
 document.write("Aqui termina el bucle");
+document.write("<br>");
 
 // Adivinar un numero secreto
 let secreto = Math.random();
@@ -135,10 +136,10 @@ secreto = (secreto * 10);
 secreto = (Math.round(secreto)); // numero aleatorio entre 0 y 10
 let intentos = 0;
 let number;
-do{
+do {
     number = parseInt(prompt("Adivina el numero secreto (0-10)"));
     intentos++;
-}while (number !== secreto);
+} while (number !== secreto);
 // Cuando la condicion del while sea false sale del bucle
 // Y cuando la condicion del while sea true se ejecuta de nuevo el bucle
 document.write("Lo lograste el numero secreto era " + secreto);
