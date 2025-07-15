@@ -31,6 +31,7 @@ do {
 document.write("Correcto la contraseña era " + passwordTrue);
 document.write("<br>");
 document.write("Intentos: " + attempts);
+document.write("<br>");
 
 // For
 // Calcule la suma de los 10 primeros num naturales
@@ -86,10 +87,11 @@ document.write("El array completo es " + array + "<br>");
 array.splice(0);
 document.write("El array completo es " + array);
 // El array completo quedaria vacio
+document.write("<br>");
 
 // FUNCIONES
 // declare una funcion llamada suma
-function suma (num1, num2) {
+function suma(num1, num2) {
     // num1 y num2 son los parametros de la funcion
     return num1 + num2;
 }
@@ -99,7 +101,7 @@ let resultado = suma(10, 20);
 // 10 y 20 son los argumentos de la funcion
 alert("El resultado de la suma es " + resultado);
 
-function saludar (nombre) {
+function saludar(nombre) {
     alert(`Hola ${nombre} bienvenido a mi pagina`);
 }
-saludar (prompt("Ingresa tu nombre"));
+saludar(prompt("Ingresa tu nombre"));
