@@ -26,18 +26,25 @@ delete usuario.membresia;
 
 // RECORRIENDO DATOS DE UN OBJETO (dos maneras)
 // 1.
-for (const key in usuario) {
+for (const key in usuario) { // recorre las propiedades del objeto
+    // hasOwnProperty → devuelve un valor booleano que indica si el objeto tiene la propiedad especificada como propio 
     if (usuario.hasOwnProperty(key)) {
-        // hasOwnProperty → devuelve un valor booleano que indica si el objeto tiene la propiedad especificada como propio 
+        // si devuelve true, entonces es un propiedad propia del objeto y podemos acceder a ella
         console.log(usuario[key]);
     }
 }
-// 2.
-const keys = Object.keys(usuario);
-console.log(keys);
-// Nos devuelve un array con los nombres de las propiedades del objeto
-keys.map((key) => {
+
+// FUNCIONA IGUAL ASI 
+for (const key in usuario) { // recorre las propiedades del objeto
     console.log(usuario[key]);
+}
+
+// 2. "mas recomendado"
+const llaves = Object.keys(usuario);
+console.log(llaves);
+// Nos devuelve un array con los nombres de las propiedades del objeto
+llaves.map((llave) => {
+    console.log(usuario[llave]);
     // Nos devuelve el valor de la propiedad
 })
 
@@ -57,8 +64,8 @@ const products = [
     {
         id: 3,
         name: "Lavadora",
-        price: 7800
-        , categories: ["electrodomestico"]
+        price: 7800,
+        categories: ["electrodomestico"]
     }
 ];
 // ACCEDER A LOS DATOS DE UN ARRAY
@@ -76,8 +83,8 @@ products.map((product) => {
     const keys = Object.keys(product);
     // Object.keys → devuelve un array con los nombres de las propiedades del objeto
     keys.forEach((key) => {
-        // forEach → ejecuta una instruccion para cada elemento del array
-        console.log(`${key}: ${(product[key])}`);
+        // forEach → ejecuta una instruccion para cada elemento del array, en este caso las propiedades del objeto
+        console.log(`${key}: ${product[key]}`);
     })
 })
 
@@ -93,30 +100,30 @@ console.log(auto1);
 
 // 2. Funcion Constructor
 // Esta funcion para diferencias con las demas funciones las nombramos inicialmente con MAYÚSCULA
-function Auto(marca, modelo, color, año) {
+function Auto (marca, model, colour, year) {
     this.marca = marca; // marca es el parametro de la funcion constructor
-    this.modelo = modelo;
-    this.color = color;
-    this.año = año;
-    // El this nos permite acceder a las propiedades del objeto
+    this.modelo = model; 
+    this.color = colour;
+    this.año = year;
+    // El this nos permite acceder a las propiedades (valores) del objeto
 }
-const auto2 = new Auto("fiat", "bravo", "verde", 2008);
+const auto2 = new Auto ("chevrolet", "corvette", "negro", 2002);
 // new → crea un nuevo objeto
 console.log(auto2);
 
 // // 3. Constructor Object()
-// crea un objeto vacio
+// crea un objeto vacio (generico)
 const auto3 = new Object();
-auto3.marca = "fiat";
-auto3.modelo = "bravo";
-auto3.color = "verde";
-auto3.año = 2008;
-// console.log(auto3);
+auto3.marca = "volkswagen";
+auto3.modelo = "golf";
+auto3.color = "azul";
+auto3.año = 2020;
+console.log(auto3);
 
 // 4. Object.create()
 // crea un objeto vacio
 const auto4 = Object.create(auto3);
-console.log(auto4.marca) // imprime fiat
+console.log(auto4.marca) // imprime volkswagen
 // nos trae el valor del objeto auto3 y lo copia en el objeto auto4
 auto4.precio = 45000;
 console.log(auto4); // imprime { precio: 45000 }
@@ -142,14 +149,14 @@ console.log(mascota3); // imprime un objeto (mismo al mascota1)
 // ELEMENTOS DE LA POO
 // - CLASES
 class Persona {
-    constructor(nombre, apellido, edad, pais) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.pais = pais;
+    constructor(name, lastName, age, country) {
+        this.nombre = name;
+        this.apellido = lastName;
+        this.edad = age;
+        this.pais = country;
     }
     // MÉTODOS
-    comer(){
+    comer() {
         alert(`${this.nombre} esta comiendo`);
     }
 }
