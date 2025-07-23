@@ -47,11 +47,11 @@ class Persona {
     }
 }
 //Crear objeto con CONSTRUCTOR
-const Persona1 = new Persona("Gonzalo", "Martinez", "21", "Argentina", "gonzalo@gmail.com", "Test123");
-console.log(Persona1);
+const persona1 = new Persona("Gonzalo", "Martinez", "21", "Argentina", "gonzalo@gmail.com", "Test123");
+console.log(persona1);
 
-const Persona2 = new Persona("Benjamin", "Zelaya", "19", "Argentina", "benjamin@gmail.com", "BetoCrack");
-console.log(Persona2);
+const persona2 = new Persona("Benjamin", "Zelaya", "19", "Argentina", "benjamin@gmail.com", "BetoCrack");
+console.log(persona2);
 
 // SETTER Y GETTER (son funciones)
 // set = setea un valor (modificar)
@@ -69,14 +69,14 @@ class Producto {
         // .toFixed(2) → Arregla el decimal (con dos decimales)
     }
 }
-const Producto1 = new Producto("Jugo de Naranja", 17);
-console.log(Producto1);
+const producto1 = new Producto("Jugo de Naranja", 17);
+console.log(producto1);
 // Usando set 
-Producto1.actualizarPrecio = 23;
+producto1.actualizarPrecio = 23;
 // Usando get
-console.log(`Precio actualizado: $${Producto1.precioFormateado}`);
+console.log(`Precio actualizado: $${producto1.precioFormateado}`);
 // Objeto actualizado
-console.log(Producto1);
+console.log(producto1);
 
 // OTRO EJEMPLO
 class Rectangle {
@@ -85,12 +85,12 @@ class Rectangle {
         this._width = width;
     }
     // nueva altura
-    set changeHeight(value) {
-        this._height = value;
+    set changeHeight(height) {
+        this._height = height;
     }
     // nuevo ancho 
-    set changeWidth(value = 0) {
-        this._width = value;
+    set changeWidth(width) {
+        this._width = width;
     }
     // area del rectangulo
     get area() {
